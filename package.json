@@ -16,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docker:local:build": "docker build -t kaurgak-mu-aks-react:local -f Dockerfile.local .",
+    "docker:local:run": "docker run -p 3000:3000 kaurgak-mu-aks-react:local"
   },
   "eslintConfig": {
     "extends": "react-app"
