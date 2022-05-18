@@ -28,4 +28,4 @@ spec:
             - containerPort: 80
           env:
             - name: API_URL
-              value: 'http://10.56.46.45:3001/api'
+              value: '/api'
