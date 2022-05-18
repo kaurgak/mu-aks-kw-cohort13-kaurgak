@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kaurgak-mu-aks-react
+  namespace: kaurgak
   labels:
     app: kaurgak-mu-aks-react
 spec:
@@ -18,7 +19,7 @@ spec:
         'kubernetes.io/os': linux
       containers:
         - name: kaurgak-mu-aks-react
-          image: kaurgak-mu-aks-react:1.0
+          image: acrmuakskaurgakdev.azurecr.io/kaurgak-mu-aks-react:1.0
           resources:
             limits:
               memory: '64Mi'
@@ -27,4 +28,4 @@ spec:
             - containerPort: 80
           env:
             - name: API_URL
-              value: 'http://localhost:3001/api'
+              value: 'http://10.56.46.45:3001/api'
