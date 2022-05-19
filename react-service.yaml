@@ -3,8 +3,7 @@ kind: Service
 metadata:
   name: kaurgak-mu-aks-react
   namespace: kaurgak
-  annotations:
-    service.beta.kubernetes.io/azure-load-balancer-internal: 'true'
+  
 spec:
   type: LoadBalancer
   selector:
